@@ -14,6 +14,7 @@ def check_folder(folder_path_list):
 def find_next_filename(filename, output_dir):
     name, ext = os.path.splitext(filename)
     i = 1
+    filename = f"{name}_{i}{ext}"
     while os.path.exists(os.path.join(output_dir, filename)):
         i += 1
         filename = f"{name}_{i}{ext}"
